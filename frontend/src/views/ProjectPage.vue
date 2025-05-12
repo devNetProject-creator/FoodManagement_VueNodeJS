@@ -11,7 +11,7 @@
       <h2>Key Features</h2>
       <ul>
         <li>User authentication with JWT (login/signup/logout)</li>
-        <li>Browse food menu with images and prices (₹)</li>
+        <li>Browse food menu with images and prices ($)</li>
         <li>Add, update, and remove items from cart (cart persists across refreshes)</li>
         <li>Place orders with secure API calls and payment method selection</li>
         <li>Order history and order status tracking</li>
@@ -40,7 +40,7 @@
     <section class="notes">
       <h2>Special Notes</h2>
       <ul>
-        <li>All price displays use the rupee symbol (₹).</li>
+        <li>All price displays use the rupee symbol ($).</li>
         <li>Authentication tokens are stored securely in localStorage.</li>
         <li>Project is designed for learning and demonstration purposes.</li>
       </ul>

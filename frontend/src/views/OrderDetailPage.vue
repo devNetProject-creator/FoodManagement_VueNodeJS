@@ -14,7 +14,7 @@
       <div class="order-summary">
         <div class="summary-row">
           <span class="summary-label">Total Price:</span>
-          <span class="summary-value">₹{{ order.price }}</span>
+          <span class="summary-value">${{ order.price }}</span>
         </div>
       </div>
       <h3 class="items-title"><i class="fas fa-utensils"></i> Items</h3>

@@ -15,7 +15,7 @@
           <div class="mb-2"><span class="badge bg-gradient-orange me-2">{{ food.Cuisine }}</span></div>
           <p class="food-detail-desc mb-3">{{ food.Description }}</p>
           <div class="mb-2"><strong>Available Quantity:</strong> <span :class="food.Quantity > 0 ? 'text-success' : 'text-danger'">{{ food.Quantity }}</span></div>
-          <div class="mb-3"><strong>Price:</strong> <span class="food-detail-price">₹{{ food.price }}</span></div>
+          <div class="mb-3"><strong>Price:</strong> <span class="food-detail-price">${{ food.price }}</span></div>
         </div>
       </div>
     </div>

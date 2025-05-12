@@ -16,7 +16,7 @@
           >
             <div class="item-details">
               <h5 class="mb-1">{{ item.name }}</h5>
-              <p class="text-muted mb-0">₹{{ item.price }}</p>
+              <p class="text-muted mb-0">${{ item.price }}</p>
             </div>
             <div class="quantity-controls d-flex align-items-center">
               <button
@@ -54,15 +54,15 @@
           </div>
           <div class="d-flex justify-content-between mb-3">
             <span class="font-weight-bold">Subtotal:</span>
-            <span class="font-weight-bold">₹{{ calculateSubtotal() }}</span>
+            <span class="font-weight-bold">${{ calculateSubtotal() }}</span>
           </div>
           <div class="d-flex justify-content-between mb-3">
             <span class="font-weight-bold">Delivery Fee:</span>
-            <span class="font-weight-bold">₹50</span>
+            <span class="font-weight-bold">$50</span>
           </div>
           <div class="d-flex justify-content-between mb-3">
             <span class="font-weight-bold">Total:</span>
-            <span class="font-weight-bold">₹{{ calculateTotal() }}</span>
+            <span class="font-weight-bold">${{ calculateTotal() }}</span>
           </div>
           <button
             class="btn btn-success w-100 mt-3"

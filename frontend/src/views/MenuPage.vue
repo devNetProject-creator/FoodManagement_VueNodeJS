@@ -48,7 +48,7 @@
                 <div class="food-details mb-3">
                   <div class="d-flex justify-content-between align-items-center">
                     <span class="text-muted">{{ food.Cuisine }}</span>
-                    <span class="food-price">₹{{ parseFloat(food.Price ?? food.price) || 0 }}</span>
+                    <span class="food-price">${{ parseFloat(food.Price ?? food.price) || 0 }}</span>
                   </div>
                   <div class="d-flex justify-content-between align-items-center">
                     <p class="food-description">{{ food.Description }}</p>
@@ -110,7 +110,7 @@
                   @click.stop="decreaseQuantity(item.foodId)"
                   :disabled="item.quantity <= 1"
                 >-</button>
-                <span class="mx-2">₹{{ calculateItemTotal(item.foodId) }}</span>
+                <span class="mx-2">${{ calculateItemTotal(item.foodId) }}</span>
                 <button
                   class="btn btn-outline-secondary btn-sm"
                  @click.stop="increaseQuantity(item.foodId)"
@@ -125,7 +125,7 @@
           <div class="cart-footer d-flex flex-column gap-3">
             <div class="d-flex justify-content-between">
               <span class="font-weight-bold">Subtotal:</span>
-              <span class="font-weight-bold">₹{{ calculateSubtotal.value }}</span>
+              <span class="font-weight-bold">${{ calculateSubtotal.value }}</span>
             </div>
             <button
               class="btn btn-success w-100"
