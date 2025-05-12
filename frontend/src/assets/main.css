@@ -1,0 +1,182 @@
+/* Global styles */
+:root {
+  --primary-color: #FF6B35; /* Warm Orange */
+  --secondary-color: #4CAF50; /* Fresh Green */
+  --background-color: #FFF8F0; /* Soft Beige */
+  --text-color: #333333; /* Primary Text */
+  --text-secondary: #666666; /* Secondary Text */
+  --error-color: #E53935; /* Red */
+  --success-color: #43A047; /* Green */
+  --border-radius: 12px;
+  --transition: all 0.3s ease;
+  --light-bg: #f8f9fa;
+  --dark-bg: #34495e;
+}
+
+/* Add Poppins font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+/* Global Styles */
+body {
+  font-family: 'Poppins', 'Roboto', 'Inter', sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: var(--text-color);
+}
+
+.navbar-brand img {
+  margin-right: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.navbar-brand img:hover {
+  transform: scale(1.05);
+}
+
+/* Loading spinner */
+.loading-spinner {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 2px solid var(--primary-color);
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Error message styling */
+.error-message {
+  color: var(--danger-color);
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+}
+
+/* Success message styling */
+.success-message {
+  color: var(--success-color);
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+}
+
+/* Form input styling */
+.form-input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 2px rgba(46, 204, 113, 0.2);
+}
+
+/* Button styling */
+.primary-button {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.primary-button:hover:not(:disabled) {
+  background-color: var(--success-color);
+}
+
+.primary-button:disabled {
+  background-color: #bdc3c7;
+  cursor: not-allowed;
+}
+
+/* Card Styles */
+.card {
+  border: none;
+  border-radius: var(--border-radius);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  transition: var(--transition);
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Food Card Styles */
+.food-card {
+  height: 100%;
+  transition: var(--transition);
+}
+
+.food-card .card-body {
+  padding: 1.5rem;
+}
+
+.food-card .card-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text-color);
+  margin-bottom: 1rem;
+}
+
+.food-details {
+  margin-bottom: 1.5rem;
+}
+
+.food-details .text-muted {
+  font-size: 0.9rem;
+}
+
+.food-details .badge {
+  font-size: 0.85rem;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+}
+
+.food-details .badge.bg-secondary {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.food-details .badge.bg-success {
+  background-color: var(--success-color);
+  color: white;
+}
+
+.food-details .badge.bg-danger {
+  background-color: var(--error-color);
+  color: white;
+}
+
+.food-card .btn-primary {
+  margin-top: 1rem;
+  padding: 0.75rem 1.5rem;
+}
+
+.food-card .btn-primary:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+/* Responsive design helpers */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 1rem;
+  }
+}
